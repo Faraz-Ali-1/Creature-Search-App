@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="creature search.css">
+    <title>The Jiyura Realm</title>
+</head>
+<body>
+
+    <div class="video">
+        <video autoplay muted loop id="video">
+            <source src="dark forest.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <audio src="main screen 1.mp3" autoplay loop hidden id="main-audio"></audio>
+    <audio src="jumpscare 1.mp3" hidden id="monster-audio"></audio>
+    <audio src="monster 1.mp3" hidden id="monster-scream"></audio>
+    <audio src="monster run.mp3" hidden id="monster-run"></audio>
+
+    <h1>RPG Search App</h1>
+
+    <div class="main-container">
+        <p id="search-txt">Search for Creature Name or ID:</p>
+
+        <div class="input-div">
+            <form>
+                <input type="text" id="search-input" required>
+                <button id="search-button">SEARCH</button>
+            </form>
+        </div>
+
+        <h2 id="creature-name" class="common-name"></h2>
+        <span id="weight"></span> <span id="height"></span> <br><br>
+        <span id="type-1" class="common"></span> <span id="type-2" class="common"></span>
+
+        <h3 id="sp-name"></h3>
+        <p id="sp-desc"></p>
+
+        <table id="table">
+            <tr>
+                <th>Base</th>
+                <th>Stats</th>
+            </tr>
+            <tr>
+                <td>HP</td>
+                <td id="hp"></td>
+            </tr>
+            <tr>
+                <td>Attack</td>
+                <td id="attack"></td>
+            </tr>
+            <tr>
+                <td>Defense</td>
+                <td id="defense"></td>
+            </tr>
+            <tr>
+                <td>Speed</td>
+                <td id="speed"></td>
+            </tr>
+            <tr>
+                <td>Sp. Attack</td>
+                <td id="special-attack"></td>
+            </tr>
+            <tr>
+                <td>Sp. Defense</td>
+                <td id="special-defense"></td>
+            </tr>
+        </table>
+
+    </div>
+    
+
+    <script src="creature search.js"></script>
+    <script>
+        const mainAudio = document.getElementById('main-audio');
+        const monsterRoar = document.getElementById("monster-scream");
+        const monsterRun = document.getElementById("monster-run");
+
+        mainAudio.volume = 0.5;
+        monsterRoar.volume = 0.7;
+        monsterRun.volume = 0.6;
+
+        function startMusic() {
+        // We use .play() and handle the promise to catch potential errors
+        setTimeout(() => {
+            monsterRoar.play();
+        }, 3000)
+
+        setTimeout(() => {
+            monsterRun.play();
+        }, 14000);
+
+        mainAudio.play().catch(error => {
+            console.log("Autoplay failed:", error);
+        });
+        // Remove the listener after the first successful play
+        document.removeEventListener('click', startMusic);
+    }
+    
+    // Start music on the very first click/interaction by the user
+    document.addEventListener('click', startMusic);
+
+    
+
+    setInterval(() => {
+            // The code inside this function executes after the delay
+            monsterRoar.play().catch(error => {
+                // Catching the promise error is a good practice
+                console.log("Audio playback failed:", error);
+            });
+        }, 60000);
+
+    setInterval(() => {
+            // The code inside this function executes after the delay
+            monsterRun.play().catch(error => {
+                // Catching the promise error is a good practice
+                console.log("Audio playback failed:", error);
+            });
+        }, 70000);    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+body{
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+#video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(0.6);
+    animation: videofade 11.8s infinite ease-in-out;
+
+}
+
+@keyframes videofade{
+    0%{
+        opacity: 0.1;
+    }
+    30%, 70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.1;
+    }
+}
+h1{
+    font-size: 3rem;
+    color: grey;
+    text-align: center;
+}
+.main-container{
+    margin: auto;
+    width: 500px;
+    background-color: rgb(10, 10, 10);
+    padding: 1rem;
+    box-shadow: 0px 0px 10px 6px rgb(53, 53, 53);
+    border-radius: 5%;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 2px solid black;
+}
+.main-container:hover{
+    box-shadow: 0px 0px 25px 10px rgb(32, 32, 32);
+    transition: 0.3s;
+    animation: color infinite 10s ease-in-out;
+    
+}
+#search-txt{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.input-div{
+    margin: auto;
+    text-align: center;
+}
+#search-input{
+    width: 60%;
+    height: 1rem;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 6px 0px 0px 6px;
+    border: 1px solid black;
+
+}
+#search-input:focus{
+    border: 1px solid rgb(36, 36, 36);
+}
+#search-button{
+    background-color: rgb(36, 36, 36);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0px 6px 6px 0px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+#search-button:hover{
+    box-shadow: 0px 0px 14px 3px rgb(43, 4, 70);
+}
+
+
+/* ************************ */
+/* dynamic styles for names */
+/* ************************ */
+.common-name{
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+.pyrolynx{
+    color: rgb(255, 69, 0);
+    filter: drop-shadow(0 0 0.4rem rgb(255, 69, 0));
+}
+.aquoroc{
+    color: rgb(0, 191, 255);
+    filter: drop-shadow(0 0 0.4rem rgb(0, 191, 255));
+}
+.voltadon{
+    color: rgb(255, 215, 0);
+    filter: drop-shadow(0 0 0.4rem rgb(255, 215, 0));
+}
+.floraspine{
+    color: rgb(34, 139, 34);
+    filter: drop-shadow(0 0 0.4rem rgb(34, 139, 34));
+}
+.cryostag{
+    color: rgb(135, 206, 250);
+    filter: drop-shadow(0 0 0.4rem rgb(135, 206, 250));
+}
+.terradon{
+    color: rgb(210, 180, 140);
+    filter: drop-shadow(0 0 0.4rem rgb(210, 180, 140));
+}
+.emberapod{
+    color: rgb(255, 140, 0);
+    filter: drop-shadow(0 0 0.4rem rgb(255, 140, 0));
+}
+.lunaclaw{
+    color: rgb(75, 0, 130);
+    filter: drop-shadow(0 0 0.4rem rgb(75, 0, 130));
+}
+.quillquake{
+    color: rgb(160, 82, 45);
+    filter: drop-shadow(0 0 0.4rem rgb(160, 82, 45));
+}
+.mystifin{
+    color: rgb(138, 43, 226);
+    filter: drop-shadow(0 0 0.4rem rgb(138, 43, 226));
+}
+.dracilume{
+    color: rgb(72, 61, 139);
+    filter: drop-shadow(0 0 0.4rem rgb(72, 61, 139));
+}
+.thornaconda{
+    color: rgb(0, 100, 0);
+    filter: drop-shadow(0 0 0.4rem rgb(0, 100, 0));
+}
+.frostbyte{
+    color: rgb(175, 238, 238);
+    filter: drop-shadow(0 0 0.4rem rgb(175, 238, 238));
+}
+.graviboa{
+    color: rgb(139, 69, 19);
+    filter: drop-shadow(0 0 0.4rem rgb(139, 69, 19));
+}
+.zephyreon{
+    color: rgb(135, 206, 235);
+    filter: drop-shadow(0 0 0.4rem rgb(135, 206, 235));
+}
+.brontogale{
+    color: rgb(70, 130, 180);
+    filter: drop-shadow(0 0 0.4rem rgb(70, 130, 180));
+}
+.shadeelisk{
+    color: rgb(72, 61, 139);
+    filter: drop-shadow(0 0 0.4rem rgb(72, 61, 139));
+}
+.titanule{
+    color: rgb(205, 133, 63);
+    filter: drop-shadow(0 0 0.4rem rgb(205, 133, 63));
+}
+.faegis{
+    color: rgb(255, 20, 147);
+    filter: drop-shadow(0 0 0.4rem rgb(255, 20, 147));
+}
+/* ************************ */
+/* dynamic styles for names */
+/* ************************ */
+#weight{
+    font-weight: bold;
+}
+#height{
+    font-weight: bold;
+}
+
+/* ******************************* */
+/* dynamic styles for the sp types */
+/* ******************************* */
+
+.common{
+    font-size: 1.1rem;
+    margin-top: 3rem;
+    padding: 0.5rem;
+    border-radius: 5%;
+    font-weight: bold;
+}
+.fire{
+    background-color: rgb(255, 1, 1);
+    color: white;
+}
+.steel{
+    background-color: rgb(192, 192, 192);
+    color: black;
+}
+.fairy{
+    background-color: rgb(255, 182, 255);
+    color: black;
+}
+.water{
+    background-color: rgb(1, 1, 255);
+    color: white;
+}
+.electric{
+    background-color: rgb(255, 255, 1);
+    color: black;
+}
+.rock{
+    background-color: rgb(139, 69, 19);
+    color: white;
+}
+.dragon{
+    background-color: rgb(106, 90, 205);
+    color: white;
+}
+.grass{
+    background-color: rgb(34, 139, 34);
+    color: white;
+}
+.poison{
+    background-color: rgb(148, 0, 211);
+    color: white;
+}
+.ice{
+    background-color: rgb(173, 216, 230);
+    color: black;
+}
+.dark{
+    background-color: rgb(47, 79, 79);
+    color: white;
+}
+.flying{
+    background-color: rgb(135, 206, 235);
+    color: black;
+}
+.bug{
+    background-color: rgb(154, 205, 50);
+    color: black;
+}
+.ghost{
+    background-color: rgb(75, 0, 130);
+    color: white;
+}
+.psychic{
+    background-color: rgb(255, 20, 147);
+    color: white;
+}
+.ground{
+    background-color: rgb(210, 180, 140);
+    color: black;
+}
+
+/* *************************** */
+/* dynamic styles for sp types */
+/* *************************** */
+
+
+#sp-name{
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-size: 1.3rem;
+}
+#sp-desc{
+    margin-top: 0.2rem;
+    margin-bottom: 2rem;
+}
+#table{
+    margin: auto;
+    text-align: center; 
+    font-size: 1.4rem;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.5rem;
+}
+td, th{
+    background-color: rgb(36, 36, 36);
+    padding: 0.5rem;
+    transition: 0.2s;
+}
+td:hover, th:hover{
+    transition: 0.3s;
+    scale: 1.02;
+    box-shadow: 0px 0px 14px 3px rgb(43, 4, 70);
+}
