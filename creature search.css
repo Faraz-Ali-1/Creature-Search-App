@@ -6,7 +6,7 @@ body{
 }
 
 ::-webkit-scrollbar{
-    width: 10px;
+    width: 5px;
 }
 ::-webkit-scrollbar-thumb{
     background-color: rgb(56, 3, 93);
@@ -299,3 +299,4 @@ td:hover, th:hover{
     box-shadow: 0px 0px 14px 3px rgb(43, 4, 70);
 
 }
+
